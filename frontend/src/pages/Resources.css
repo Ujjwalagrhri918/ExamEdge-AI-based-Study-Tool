@@ -1,0 +1,167 @@
+/* General container */
+.resources-container {
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 16px;
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  /* Scrollbar hiding */
+  .resources-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  /* Loading state */
+  .loading {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: #aaa;
+  }
+  .no-file-message {
+    color: #888;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  /* Section headings */
+  .section {
+    margin-bottom: 3rem;
+  }
+  
+  .section .heading {
+    font-size: 1.4rem;             /* Smaller font size */
+    font-weight: 600;              /* Medium weight for emphasis */
+    color: #4ea8de;   
+    padding: 20px 0px;             /* Soft gray for the text */
+    text-align: left; 
+  }
+  
+  /* Cards container */
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  /* Individual card */
+  .card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    background-color: #333;
+  }
+  
+  /* Thumbnail image */
+  .thumbnail {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 1px solid #333;
+  }
+  
+  /* Card content */
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+  
+  .author {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.6rem;
+  }
+  
+  .desc {
+    font-size: 0.95rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+  }
+  
+  /* Links */
+  .link {
+    display: inline-block;
+    background-color: #4ea8de;
+    color: #fff;
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .link:hover {
+    background-color: #2196f3;
+    transform: scale(1.05);
+  }
+  
+  /* Key Points for Cards */
+  .key-point {
+    background-color: #282a2c;
+    border-left: 4px solid #4ea8de;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+  
+  .key-point:hover {
+    background-color: #333;
+  }
+  
+  .key-point .icon {
+    color: #4ea8de;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  /* Topic Boxes */
+  .topic-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  
+  .topic {
+    padding: 0.6rem 1rem;
+    background-color: #333;
+    border: 1px solid #4ea8de;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #e1f5fe;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .topic:hover {
+    background-color: #4ea8de;
+    color: #121212;
+    transform: scale(1.05);
+  }
+  

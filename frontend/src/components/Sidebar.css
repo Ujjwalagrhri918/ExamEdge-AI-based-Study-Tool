@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+.sidebar {
+  font-family: 'Inter', sans-serif;
+  background-color: #282a2c;
+  color: #d1d5db;
+  height: 100vh;
+  width: 300px;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s ease;
+  padding: 0.75rem;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.collapsed {
+  width: 72px;
+}
+
+.menu-button {
+  display: flex;
+  background: none;
+  border: none;
+  color: #d1d5db;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-bottom: 1.2rem;
+  margin-left: 0.3rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+  max-width: 40px;
+
+}
+
+.menu-button:hover {
+  background-color: #343541;
+}
+
+.sidebar-top,
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #343541;
+  color: #d1d5db;
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.sidebar-item:hover {
+  background-color: #40414f;
+  color: white;
+}
+
+.sidebar.collapsed .sidebar-item span {
+  display: none;
+}
+
+.settings-button {
+  margin-top: auto;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+.recent-chats-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow: hidden; /* This removes the scrollbar */
+    max-height: 300px; /* Adjust the height as needed */
+    /* Optional: Add a smoother scroll behavior if you want */
+    scroll-behavior: smooth;
+  }
+  
+  .chat-box {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .chat-box:hover {
+    background-color: #40414f;
+    border: 1px solid #4b4b4b;
+    border-radius: 6px;
+  }
+  
+  .no-chats {
+    color: #888;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+
+  
+  .chat-box-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0 6px;
+  }
+  
+  .delete-button {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 6px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+  }
+  
+  .delete-button:hover {
+    background-color: #444;
+    color: #ff6961;
+  }
+  

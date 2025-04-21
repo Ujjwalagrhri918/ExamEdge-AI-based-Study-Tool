@@ -1,0 +1,106 @@
+:root {
+    --bg-dark: #1e1e1e;
+    --card-bg: #2a2a2a;
+    --text-light: #f5f5f5;
+    --accent: #4fc3f7;
+    --slot-bg: #333;
+    --slot-hover: #4fc3f7;
+    --border-radius: 10px;
+  }
+  
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .expert-help-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+  }
+  
+  .faculty-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .faculty-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    width: 320px;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease;
+  }
+  
+  .faculty-card:hover {
+    transform: translateY(-6px);
+  }
+  
+  .faculty-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .faculty-info {
+    padding: 1rem;
+  }
+  
+  .faculty-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-light);
+  }
+  
+  .title-only {
+    color: #bbb;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  
+  .faculty-info p {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+    color: #ddd;
+  }
+  
+  .faculty-info a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  .slot-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .slot-box {
+    padding: 0.5rem 0.75rem;
+    background-color: var(--slot-bg);
+    border: 1px solid #555;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .slot-box:hover {
+    background-color: var(--slot-hover);
+    color: #000;
+    font-weight: bold;
+  }
+  
