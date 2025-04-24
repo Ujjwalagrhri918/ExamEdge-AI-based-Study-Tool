@@ -8,7 +8,7 @@ const Home = () => {
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState("");
 
-  const { addUpload, selectFile } = useContext(UploadContext);
+  const { addUpload, selectFile, URL } = useContext(UploadContext);
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
@@ -35,7 +35,7 @@ const Home = () => {
     try {
       setUploading(true);
       const response = await fetch(
-        "https://02c9-35-185-161-252.ngrok-free.app/upload-pdf/",
+        `${URL}/upload-pdf/`,
         {
           method: "POST",
           body: formData,

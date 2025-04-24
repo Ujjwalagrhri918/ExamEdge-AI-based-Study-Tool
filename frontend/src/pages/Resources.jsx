@@ -3,7 +3,7 @@ import { UploadContext } from '../context/UploadContext';
 import './Resources.css';
 
 const Resources = () => {
-  const { selectedFile } = useContext(UploadContext);
+  const { selectedFile, URL } = useContext(UploadContext);
   const [books, setBooks] = useState({});
   const [videos, setVideos] = useState({});
   const [loading, setLoading] = useState(true);
@@ -26,7 +26,7 @@ const Resources = () => {
         setLoading(true);
 
         const bookRes = await fetch(
-          `https://02c9-35-185-161-252.ngrok-free.app/fetch-books/${selectedFile}`,
+          `${URL}/fetch-books/${selectedFile}`,
           {
             method: 'POST',
             headers: {
@@ -38,7 +38,7 @@ const Resources = () => {
         const bookData = await bookRes.json();
 
         const videoRes = await fetch(
-          `https://02c9-35-185-161-252.ngrok-free.app/fetch-videos/${selectedFile}`,
+          `${URL}/fetch-videos/${selectedFile}`,
           {
             method: 'POST',
             headers: {

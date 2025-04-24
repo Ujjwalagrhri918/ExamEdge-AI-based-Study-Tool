@@ -1,0 +1,76 @@
+/* Appointment Info Container */
+.appointment-info-container {
+ 
+    color: #d1d5db;
+    padding: 1rem;
+    border-radius: 8px;
+
+    margin-top: 1rem;
+    overflow-y: auto;
+    max-height: 80vh;
+    
+  }
+  
+   h2 {
+    padding-left: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #f3f4f6;
+  }
+  
+  .appointments-list {
+    display: flex;
+    flex-wrap: wrap;  /* Allow items to wrap to the next row */
+    gap: 1rem;
+  }
+  
+  .appointment-card {
+    background-color: #343541;
+    padding: 1rem;
+    border-radius: 8px;
+    width: calc(33% - 1rem);  /* 3 items per row with space in between */
+    box-sizing: border-box;
+    transition: background 0.2s;
+    
+  }
+  
+  .appointment-card:hover {
+    background-color: #40414f;
+  }
+  
+  .appointment-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .appointment-detail strong {
+    font-weight: 500;
+    color: #f3f4f6;
+  }
+  
+  .appointment-detail span {
+    color: #9ca3af;
+  }
+  
+  .no-appointments {
+    color: #888;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* Responsive Design for Appointment Info */
+  @media (max-width: 768px) {
+    .appointments-list {
+      flex-direction: column;  /* Stack items in a single column on smaller screens */
+      gap: 0.75rem;
+    }
+  
+    .appointment-card {
+      width: 100%;  /* Make each card take full width on smaller screens */
+    }
+  }
+  

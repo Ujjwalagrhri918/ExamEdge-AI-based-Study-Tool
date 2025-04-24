@@ -15,7 +15,11 @@
   
   .page-content {
     padding: 1.5rem;
-    overflow-y: auto;
+    overflow-y: scroll;
     flex-grow: 1;
+  }
+
+  .page-content::-webkit-scrollbar{
+    display: none;
   }
   

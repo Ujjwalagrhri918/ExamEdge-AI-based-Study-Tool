@@ -1,0 +1,209 @@
+.appointment-container {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .appointment-container h3 {
+    font-size: 1.8rem;
+    color: #4ea8de;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .appointment-container .faculty-summary {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background-color: #282a2c;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #3b3f54;
+  }
+  
+  .appointment-container .faculty-summary img {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid #4ea8de;
+  }
+  
+  .appointment-container .faculty-summary h2{
+    color: #ffffff;
+    margin: 0 0 5px;
+  }
+  
+  .appointment-container .faculty-summary p {
+    margin: 5px 0;
+    color: #b9bdbf;
+  }
+  
+  .appointment-container label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+    color: #cccccc;
+  }
+  
+  .appointment-container textarea,
+  .appointment-container select {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 10px;
+    background-color: #282a2c;
+    font-family:'Segoe UI', sans-serif ;
+    color: #e0e0e0;
+    border: 1px solid #3b3f54;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  
+  .appointment-container textarea:focus,
+  .appointment-container select:focus {
+    outline: none;
+    border-color: #4ea8de;
+    background-color: #2f3235;
+  }
+  
+  .appointment-container .confirm-btn,
+  .appointment-container .payment-btn {
+    background-color: #4ea8de;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .appointment-container .confirm-btn:hover,
+  .appointment-container .payment-btn:hover {
+    background-color: #3c91c0;
+  }
+  
+  .appointment-container .qr-image {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border: 2px dashed #4ea8de;
+    border-radius: 12px;
+  }
+  
+  .appointment-container .payment-section {
+    background-color: #282a2c;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #3b3f54;
+  }
+  
+  .appointment-container .session-policy {
+    background-color: #2b2d2f;
+    border: 1px solid #3b3f54;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .appointment-container .session-policy h4 {
+    color: #4ea8de;
+    margin-bottom: 1rem;
+  }
+  
+  .appointment-container .session-policy ul {
+    padding-left: 1.5rem;
+    color: #b9bdbf;
+  }
+  
+  .appointment-container .session-policy li {
+    margin-bottom: 0.5rem;
+  }
+  
+
+  .appointment-container .agreement {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .appointment-container .total-amount {
+    background-color: #2f3235;
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 1rem 0;
+    border: 1px solid #3b3f54;
+    color: #ffffff;
+  }
+  
+  .appointment-container .payment-success {
+    background-color: #2d4436;
+    border: 1px solid #4ea8de;
+    padding: 1rem;
+    border-radius: 12px;
+    color: #b1f5c2;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+
+  .appointment-container .total-amount {
+    background-color: #1f2124;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid #4ea8de;
+    box-shadow: 0 4px 12px rgba(78, 168, 222, 0.1);
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .appointment-container .total-amount h4 {
+    font-size: 1.25rem;
+    color: #4ea8de;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #4ea8de;
+    padding-bottom: 0.5rem;
+  }
+  
+  .appointment-container .total-amount p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    font-weight: 500;
+    color: #e0e0e0;
+  }
+  
+  .appointment-container .total-amount .price {
+    font-weight: bold;
+    color: #b1f5c2;
+  }
+  
+  .appointment-container .total-amount .highlight {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #4ea8de;
+    margin-top: 1rem;
+    border-top: 1px dashed #4ea8de;
+    padding-top: 0.75rem;
+  }
+  .qr-payment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }

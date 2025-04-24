@@ -3,7 +3,7 @@ import { UploadContext } from '../context/UploadContext';
 import './MCQs.css';
 
 const MCQs = () => {
-  const { selectedFile } = useContext(UploadContext);
+  const { selectedFile, URL } = useContext(UploadContext);
   const [mcqs, setMcqs] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -29,7 +29,7 @@ const MCQs = () => {
         try {
           setLoading(true);
           const response = await fetch(
-            `https://02c9-35-185-161-252.ngrok-free.app/generate-mcqs/${fileName}`,
+            `${URL}/generate-mcqs/${fileName}`,
             {
               method: 'POST',
               headers: {

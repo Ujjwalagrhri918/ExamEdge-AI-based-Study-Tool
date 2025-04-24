@@ -6,8 +6,7 @@
     border-radius: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #f0f0f0;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-    
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); 
     animation: fadeIn 0.6s ease-in-out;
 
   }

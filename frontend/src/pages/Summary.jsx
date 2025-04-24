@@ -4,7 +4,7 @@ import { MdOutlineCheckCircle } from 'react-icons/md';
 import './Summary.css';
 
 const Summary = () => {
-  const { selectedFile } = useContext(UploadContext);
+  const { selectedFile, URL } = useContext(UploadContext);
   const [summaryData, setSummaryData] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -25,7 +25,7 @@ const Summary = () => {
         try {
           setLoading(true);
           const response = await fetch(
-            `https://02c9-35-185-161-252.ngrok-free.app/generate-summary/${fileName}`,
+            `${URL}/generate-summary/${fileName}`,
             {
               method: 'POST',
               headers: {

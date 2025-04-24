@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { UploadContext } from '../context/UploadContext';
-import './ExpertHelp.css';  // CSS file for styling
-
+import './ExpertHelp.css';
 
 const ExpertHelp = () => {
-  const { selectedFile } = useContext(UploadContext);
+  const { selectedFile, URL } = useContext(UploadContext);
   const [faculties, setFaculties] = useState([]);
+  const navigate = useNavigate();
 
-  const handleBookSlot = (facultyId, slot) => {
-    alert(`Appointment booked with Faculty ID: ${facultyId} at ${new Date(slot).toLocaleString()}`);
-    // You can navigate to another page or update state to reflect booked status
+  const handleBookSlot = (faculty, slot) => {
+    navigate('/appointment', { state: { faculty, slot } });
   };
 
   useEffect(() => {
@@ -17,15 +17,10 @@ const ExpertHelp = () => {
       if (!selectedFile) return;
 
       try {
-        const response = await fetch(
-          `https://02c9-35-185-161-252.ngrok-free.app/fetch-faculties/${selectedFile}`,
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          }
-        );
+        const response = await fetch(`${URL}/fetch-faculties/${selectedFile}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+        });
 
         if (!response.ok) throw new Error('Network error');
         const data = await response.json();
@@ -40,7 +35,6 @@ const ExpertHelp = () => {
 
   return (
     <div className="expert-help-container">
-
       {faculties.length === 0 ? (
         <p>No experts available or file not selected.</p>
       ) : (
@@ -64,7 +58,7 @@ const ExpertHelp = () => {
                     <div
                       key={index}
                       className="slot-box"
-                      onClick={() => handleBookSlot(faculty.id, slot)}
+                      onClick={() => handleBookSlot(faculty, slot)}
                     >
                       {new Date(slot).toLocaleString()}
                     </div>
