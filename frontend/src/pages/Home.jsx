@@ -99,7 +99,7 @@ const Home = () => {
         onClick={handleUpload}
         disabled={uploading}
       >
-        {uploading ? "Uploading..." : "Upload Document"}
+        {uploading ? "Processing..." : "Process Document"}
       </button>
 
       {message && <p className="upload-message">{message}</p>}

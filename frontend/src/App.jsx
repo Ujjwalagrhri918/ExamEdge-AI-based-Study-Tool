@@ -2,7 +2,7 @@ import React from "react";
 import './App.css'
 import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/sidebar";
+import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import Summary from "./pages/Summary";
 import MCQs from "./pages/Mcqs";
@@ -11,6 +11,7 @@ import ExpertHelp from "./pages/ExpertHelp";
 import Appointment from "./pages/Appointment"
 import AuthPage from "./auth/AuthPage";
 import AppointmentInfo from "./pages/AppointmentInfo";
+import Qna from "./pages/Qna";
 
 const App = () => {
   const location = useLocation();
@@ -37,6 +38,7 @@ const App = () => {
                 <Route path="/expert" element={<ExpertHelp/>}/>
                 <Route path="/appointment" element={<Appointment/>}/>
                 <Route path="/appointments" element={<AppointmentInfo />} />
+                <Route path="/chat" element={<Qna/>} />
               </Routes>
             </div>
           </div>

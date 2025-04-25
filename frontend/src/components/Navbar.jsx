@@ -34,7 +34,7 @@ export default function Navbar() {
 
       <NavLink to="/chat" className="nav-item">
         <FiMessageCircle className="nav-icon" />
-        <span>Chat with Doc</span>
+        <span>Chat with Document</span>
       </NavLink>
 
       <NavLink to="/expert" className="nav-item">

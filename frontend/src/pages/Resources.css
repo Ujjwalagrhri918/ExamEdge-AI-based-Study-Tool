@@ -4,7 +4,7 @@
     background-color: #1a1a1a;
     border-radius: 16px;
     color: #f1f1f1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     min-height: 100vh;
     overflow-y: scroll;
     scrollbar-width: none; /* Firefox */

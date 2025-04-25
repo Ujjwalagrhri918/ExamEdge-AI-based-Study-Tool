@@ -9,7 +9,7 @@ export const UploadProvider = ({ children }) => {
   const [uploads, setUploads] = useState([]);
   const [selectedFile, setSelectedFile] = useState(null);
 
-  const URL = "https://e927-34-70-150-136.ngrok-free.app";
+  const URL = "https://4b48-34-106-129-183.ngrok-free.app";
 
   const { db, user } = useAuth();
 
@@ -118,6 +118,7 @@ const deleteFile = async (uniqueId) => {
       `${uniqueId}_mcqs`,
       `videos-${uniqueId}`,
       `books-${uniqueId}`,
+      `${uniqueId}_chats`,
     ];
 
     keysToRemove.forEach((key) => localStorage.removeItem(key));
